@@ -71,7 +71,7 @@ app.use((error,req,res,next)=>{
 })
 
 mongoose.connect(
-    "mongodb+srv://rahul:rahul@cluster0.ytelh.mongodb.net/messages?retryWrites=true&w=majority"
+    `${process.env.MONGODB_URI}`
 )
 .then(result=>{
  app.listen(8080);
